@@ -1,0 +1,69 @@
+<section>
+    <div class="dash-container">
+        <div class="options">
+            <h3>Dashboard Kit</h3>
+            <ul>
+                <li><a href="/admin">Dealers</a></li>
+                <li><a href="/admin/logout">Logout</a></li>
+            </ul>
+        </div>
+        <div class="card-row">
+            <div class="card-dash">
+                total <br>4
+            </div>
+            <div class="card-dash">
+                open <br>2
+            </div>
+            <div class="card-dash">
+                close <br>2
+            </div>
+                <a href="/admin/add-dealer" class="btn-success">add vendor</a>
+        </div>
+        {{#if dealer}}
+        <div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  This is an alert box.
+</div>
+</div>
+{{/if}}
+        <div class="dash-table">
+            <table>
+                <thead>
+                    <th>Dealer Address</th>
+                    <th> Dealer Name</th>
+                    <th>picture</th>
+                    <th>status</th>
+                    <th>action</th>
+                </thead>
+                <tbody>
+                    {{#each dealers}}
+                    <tr>
+                    <td>{{this.Address}}</td>
+                    <td>{{this.StoreName}}</td>
+                    <td><img src="/dealer-images/{{this._id}}.jpg" alt="" width="50px" height="50px"></td>
+                    <td>open</td>
+                    <td>
+                        <a href="/admin/edit-dealer/{{this._id}}" class="btn btn-success">edit</a>
+                        <a href="/admin/delete-dealer/{{this._id}}" class="btn btn-danger" onclick="return confirm('are you want to delete {{this.StoreName}}') ">del</a>
+                        <a href="#" class="btn btn-warning">ban</a>
+                    </td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+<style>
+    table{
+        width: 100%;
+    }
+    th,td{
+        padding-left: 1em;
+        padding-top: 1em;
+    }
+    th{
+        border-bottom: 1px solid #ddd;
+        color: #999;
+    }
+</style>

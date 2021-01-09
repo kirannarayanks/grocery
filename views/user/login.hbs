@@ -1,0 +1,33 @@
+ <section id="adminLogin">
+      <div class="adminLogin">
+        <h3>Login to your account</h3>
+        <div class="login-form col-md-3 col-12">
+          <form action="/loginByEmail" method="POST">
+            <label for="Email"></label><br>
+            <input type="text" name="Email" placeholder="Email">
+            <br><br>
+            <label for="Password"></label>  <br>
+            
+            <input type="password" name="Password" placeholder="Password">
+            <br>
+            <button type="submit">Login</button>
+          </form>
+          
+        </div>
+        <p>Don't Have an Account?  <a href="/signup">join free today</a> </p>
+      </div>
+    </section>
+    <style>
+        h3{
+            left:0px
+             }
+             p{
+                 color: #080f58;
+                 width: 100%;
+                 position: absolute;
+                 top: 380px;
+             }
+        .login-form{
+            margin-left: 3em;
+        }
+    </style>

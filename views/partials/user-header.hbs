@@ -1,0 +1,32 @@
+<!-- As a link -->
+<nav class="navbar navbar-light bg-light navbar-fixed-top">
+  <a class="navbar-brand text-success" href="#"><b> My Mart</b></a>
+          <div class="dropdown">
+  <button class="btn btn-danger dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    
+    Select Stores
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      {{#each dealers}}
+    <a class="dropdown-item" href="/view-products/{{this.StoreName}}">{{this.StoreName}}</a>
+    {{/each}}
+  </div>
+</div>
+   <a href="/cart" class="ml-auto"><i class="fas fa-shopping-basket mr-3"></i></a>
+  <div>
+    
+      <div class="dropdown mr-5">
+  <a class="btn btn-primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    {{userDetails.Email}}
+
+  </a>
+
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+    <a class="dropdown-item" href="/logout">LogOut</a>
+    <a class="dropdown-item" href="#">Orders History</a>
+    <a class="dropdown-item" href="#">Something</a>
+  </div>
+</div>
+  </div>
+</nav>
+

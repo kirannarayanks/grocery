@@ -1,0 +1,47 @@
+<section id="newdealer">
+    <h3>Edit Dealer</h3>
+    <form action="/admin/edit-dealer/{{dealer._id}}" method="post">
+        <label for="Username"></label>
+        <input type="text" name="username" placeholder="username" value="{{dealer.username}}">
+        <label for="Password"></label>
+        <input type="password" name="Password" placeholder="password" value="{{dealer.Password}}">
+        <img src="/dealer-images/{{dealer._id}}.jpg" alt="dealer photo" width="100px" height="100px">
+        <input type="file" name="Image">
+        <textarea name="Address" id="address" placeholder="address" cols="30" rows="5" value="{{dealer.Address}}"></textarea>
+        <input type="text" name="StoreName" placeholder="store Name" value="{{dealer.StoreName}}">
+        <input type="text" name="ExtraInfo" placeholder="extra Info" value="{{dealer.ExtraInfo}}">
+        <input type="tel" name="Phone" placeholder="phone" value="{{dealer.Phone}}">
+        <button type="submit">submit</button>
+
+    </form>
+</section>
+<style>
+#newdealer{
+padding: 0;
+margin: 0;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    justify-content: center;
+}
+form input, form textarea{
+    margin: 1em;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    height: 2em;
+}
+button{
+    width: 120px;
+    border-radius: 10px;
+    margin-left: 5em;
+    background-color: #080f58;
+    color: #e42c64;
+    font-size: 20px;
+    font-weight: bold;
+    font-synthesis: weight;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-shadow: 5px 0px 10px #e42c64;
+}
+</style>

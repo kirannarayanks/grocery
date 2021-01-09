@@ -1,0 +1,26 @@
+ <section id="adminLogin">
+      <div class="adminLogin">
+        <h3>Dealer Login</h3>
+        <div class="login-form">
+          <form action="/dealer/login" method="POST">
+          {{!-- {{#if dealerLogInErr}}
+          <h3>invalid username or password</h3>
+
+          {{/if}} --}}
+            <label for="username"></label><br>
+            <input type="text" name="username" placeholder="username">
+            <br>
+            <label for="Password"></label>  <br>
+            
+            <input type="password" name="Password" placeholder="Password">
+            <br>
+            <button type="submit">Login</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <style>
+      #adminLogin{
+        height: 100vh;
+      }
+    </style>

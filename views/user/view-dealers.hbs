@@ -1,0 +1,92 @@
+<section>
+    <div class="search-container">
+        <div class="search">
+       <i class="fas fa-search"></i> <input type="text" placeholder="Search"><i class="fas fa-filter"></i>  
+    </div>
+    </div>
+    
+    <div class="product-container">
+        <div class="row">
+        {{#each products}}
+        <div class="col-md-3">
+        <div class="product-card">
+            <img src="/product-images/{{this._id}}.jpg" alt="product" width="100px" height="100px"><br>
+            <h5>{{this.Name}}</h5>
+            <p>Price:{{this.Price}}</p>
+            <a href="/addToCart/{{this._id}}"><i class="fas fa-plus-square"></i> 
+        </div></a>
+        </div>
+        {{/each}}
+        </div>
+    </div>
+</section>
+<style>
+    body{
+      overflow-x: hidden  ;
+    }
+    .fa-plus-square{
+        color: #05aa05;
+        font-size: 40px;
+    }
+    .search-container{
+        display: flex;
+        justify-content: center;
+    }
+    .search input{
+        padding-bottom: 5px;
+        background: transparent;
+        border: none;
+    }
+    .search{
+        padding-top: 5px;
+        border-radius: 20px;
+        width: 20%;
+        height: 2em;
+        display: flex;
+        justify-content: center;backdrop-filter: blur(10px);
+        background-color: #fffa;
+
+    }
+    section{
+        background: url('/images/christmas background.jpg');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+    .product-card p{
+        font-size: 20px;
+        font-style: oblique;
+    }
+    .product-card h5{
+        font-size: 30px;
+    }
+    .product-card img{
+        border-radius: 50%;
+        margin-left: 70px;
+        margin-top: 20px;
+    }
+    .product-container{
+        
+        color: #;
+        max-width: 100%;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: row;
+    }
+.product-card{
+    background-color: #fff9 ;
+    backdrop-filter: blur(15px);
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    margin: 1em;
+    height: 300px;
+    width: 250px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 5px 0px #333 , 
+    0px 0px 5px 0px #ddd,
+    inset 0px 0px 5px 0px #ddd,
+    inset 0px 0px 5px 0px #000;
+}
+</style>

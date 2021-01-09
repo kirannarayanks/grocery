@@ -1,0 +1,46 @@
+<section id="additem">
+    <h3>Add Item</h3>
+    <form action="/dealer/additem" method="post" enctype="multipart/form-data">
+        <label for="Name"></label>
+        <input type="text" name="Name" placeholder="Name" required>
+        <label for="category"></label>
+        <input type="text" name="Category" placeholder="Category" required>
+        <input type="file" name="Image">
+        <label for="Price"></label>
+        <input type="text" name="Price" placeholder="Price" required>
+        <label for="Total Stock"></label>
+        <input type="text" name="TotalStock" placeholder="TotalStock">
+        <button type="submit">submit</button>
+
+    </form>
+</section>
+<style>
+#additem{
+padding-left: 5em;
+margin: 0;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    justify-content: center;
+}
+form input{
+    margin: 1em;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    height: 2em;
+}
+button{
+    width: 120px;
+    border-radius: 10px;
+    margin-left: 5em;
+    background-color: #080f58;
+    color: #f5f5f5;
+    font-size: 20px;
+    font-weight: bold;
+    font-synthesis: weight;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-shadow: 5px 0px 10px #e42c64;
+}
+</style>

@@ -1,0 +1,47 @@
+<section id="newdealer">
+</div>
+    <h3>New Dealer</h3>
+    <form action="/admin/add-dealer" method="post" enctype="multipart/form-data">
+        <label for="Username"></label>
+        <input type="text" name="username" placeholder="username" required>
+        <label for="Password"></label>
+        <input type="password" name="Password" placeholder="password" required>
+        <input type="file" name="Image">
+        <textarea name="Address" id="address" placeholder="address" cols="30" rows="5" required></textarea>
+        <input type="text" name="StoreName" placeholder="store Name" required>
+        <input type="text" name="ExtraInfo" placeholder="extra Info">
+        <input type="tel" name="Phone" placeholder="phone">
+        <button type="submit">submit</button>
+
+    </form>
+</section>
+<style>
+#newdealer{
+padding: 0;
+margin: 0;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    justify-content: center;
+}
+form input, form textarea{
+    margin: 1em;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    height: 2em;
+}
+button{
+    width: 120px;
+    border-radius: 10px;
+    margin-left: 5em;
+    background-color: #080f58;
+    color: #e42c64;
+    font-size: 20px;
+    font-weight: bold;
+    font-synthesis: weight;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-shadow: 5px 0px 10px #e42c64;
+}
+</style>

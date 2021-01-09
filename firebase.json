@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "grocery",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
